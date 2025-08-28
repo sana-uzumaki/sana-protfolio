@@ -97,14 +97,13 @@ blockquote {
 }
 
 /* Navbar */
-/* Navbar */
-/* Navbar */
 header {
   width: 100%;             /* 🔥 full stretch */
   position: fixed;          /* always on top */
   top: 0;
   left: 0;
   right: 0;
+  color: rgba(0,0,0,0.8);
   background: rgba(0,0,0,0.8);
   backdrop-filter: blur(6px);
   padding: 12px 0;
