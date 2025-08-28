@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   color: #e6edf3;
   line-height: 1.6;
-  background-color: #0D1117; /* Default plain dark (Mobile) */
+  background-color: #fff; /* Default plain dark (Mobile) */
 }
 
 /* 💻 Background for Laptop/Tablet only */
