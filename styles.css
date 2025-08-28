@@ -97,24 +97,26 @@ blockquote {
 }
 
 /* Navbar */
+/* Navbar */
 header {
-  width: 100%;
-  margin-bottom: 20px;
+  width: 100vw; /* 🔥 Full viewport width */
+  left: 0;
   top: 0;
   position: sticky;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.8); /* little darker, full stretch */
   backdrop-filter: blur(6px);
-  padding: 15px 20px;
+  padding: 15px 0;   /* 🔥 remove side padding so it touches both ends */
   z-index: 1000;
   box-sizing: border-box;
 }
 
 .navbar {
+  width: 90%;  /* content inside centered */
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-}
+  }
 
 .logo {
   font-size: 20px;
