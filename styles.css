@@ -104,13 +104,13 @@ header {
   position: sticky;
   background: rgba(0,0,0,0.8); /* little darker, full stretch */
   backdrop-filter: blur(6px);
-  padding: 0 0;   /* 🔥 remove side padding so it touches both ends */
+  padding: 15px 0;   /* 🔥 remove side padding so it touches both ends */
   z-index: 1000;
   box-sizing: border-box;
 }
 
 .navbar {
-  width: 90%;  /* content inside centered */
+  width: 100%;  /* content inside centered */
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
