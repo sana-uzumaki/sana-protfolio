@@ -1,27 +1,51 @@
 /* General */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  background: #0d1117;
   color: #e6edf3;
   line-height: 1.6;
+  background-color: #0D1117; /* Default plain dark (Mobile) */
 }
+
+/* 💻 Background for Laptop/Tablet only */
+@media (min-width: 769px) {
+  body {
+    background-color: #0D1117;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(88,166,255,0.08) 2px, transparent 2px),
+      radial-gradient(circle at 80% 70%, rgba(88,166,255,0.05) 2px, transparent 2px),
+      linear-gradient(135deg, rgba(88,166,255,0.08) 1px, transparent 1px),
+      linear-gradient(45deg, rgba(34,211,238,0.05) 1px, transparent 1px);
+    background-size: 120px 120px, 200px 200px, 80px 80px, 80px 80px;
+    background-attachment: fixed;
+  }
+}
+
 a {
   color: #58a6ff;
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
+  color: #D3D3D3;
+  text-decoration: none;
 }
+
 h1, h2 {
   color: #f0f6fc;
   margin-bottom: 10px;
 }
+
 section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
+  width: 90%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 5%;
+  margin-right: 5%:
+  background: #0d1117;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
+  padding: 40px 20px;
 }
+
 blockquote {
   font-style: italic;
   color: #8b949e;
@@ -31,10 +55,10 @@ blockquote {
 
 /* Gif */
 .gif {
-  width: 100%;
-  max-width: 600px; /* bigger */
+  width: 95%;
+  max-height: 50%;
   display: block;
-  margin: 10px auto;
+  margin: 2.5px auto;
   border-radius: 15px;
 }
 
@@ -71,7 +95,6 @@ blockquote {
   transform: translateY(-2px);
 }
 
-/* Icon size */
 .stack i {
   font-size: 20px;
 }
@@ -86,22 +109,26 @@ blockquote {
 
 /* Navbar */
 header {
-  background: #161b22;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
   padding: 15px 20px;
   position: sticky;
   top: 0;
   z-index: 10;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
+
 .logo {
   font-size: 20px;
   font-weight: bold;
 }
+
 nav {
   display: flex;
   gap: 20px;
@@ -115,8 +142,13 @@ nav a {
   cursor: pointer;
 }
 
-/* 📱 Mobile */
+/* 📱 Mobile Navbar */
 @media (max-width: 768px) {
+  section {
+    width: 90%;
+    margin: 5% auto;
+  }
+
   nav {
     display: none;
     flex-direction: column;
@@ -136,49 +168,55 @@ nav a {
   }
 }
 
+/* Contact */
+#contact {
+  width: 90%;
+  margin: 5% auto;
+}
+
+.contact-box {
+  width: 76%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 20px 12%;
+  background-color: #fefefe;
+  gap: 12px;
+  transition: 0.3s;
+}
+.contact-box:hover {
+  background-color: #e6f0ff;
+  border-color: #0073b1;
+}
+.contact-box img {
+  width: 24px;
+  height: 24px;
+}
+.contact-box a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+.contact-box a:hover {
+  color: #0073b1;
+}
+
+/* Intro */
+#intro {
+  width: 90%;
+  margin: 5% auto;
+  color: #fff;
+}
+
 /* Footer */
 footer {
+  width: 100%;
   text-align: center;
-  padding: 15px;
   background: #161b22;
   color: #8b949e;
   margin-top: 20px;
+  padding: 6px 0; /* chinna padding vaachuruken */
+  font-size: 10px; /* text perusa theriyama control panna */
 }
-
-  #contact {
-    max-width: 400px;
-    margin: 20px auto;
-    font-family: Arial, sans-serif;
-  }
-
-  .contact-box {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px 15px;
-    margin: 10px 0;
-    background-color: #fefefe;
-    gap: 12px;
-    transition: 0.3s;
-  }
-
-  .contact-box:hover {
-    background-color: #e6f0ff;
-    border-color: #0073b1;
-  }
-
-  .contact-box img {
-    width: 24px;
-    height: 24px;
-  }
-
-  .contact-box a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-  }
-
-  .contact-box a:hover {
-    color: #0073b1;
-  }
