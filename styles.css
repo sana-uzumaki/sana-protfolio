@@ -9,8 +9,9 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  margin: 0;  /* 🔥 remove unwanted white space */
+  margin: 0;              /* remove default gap */
   padding: 0;
+  overflow-x: hidden;     /* remove right side gap */
 }
 
 a {
@@ -23,23 +24,24 @@ a:hover {
 }
 
 h1, h2 {
-  color: #ffffff;   /* 🔥 Headings white */
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
+/* Section */
 section {
   width: 90%;
-  margin: 5% auto;
-  background: #0D1117;   /* Solid dark bg */
+  margin: 40px auto;      /* 🔥 safe spacing for sections */
+  background: #0D1117;    /* Solid dark bg */
   border-radius: 12px;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
   padding: 40px 20px;
-  color: #ffffff;  /* 🔥 Section text white */
+  color: #ffffff;
 }
 
 blockquote {
   font-style: italic;
-  color: #cccccc;  /* light grey for contrast */
+  color: #cccccc;  
   border-left: 3px solid #0073b1;
   padding-left: 10px;
 }
@@ -101,10 +103,9 @@ blockquote {
 /* Navbar */
 header {
   width: 100%;               /* 🔥 full stretch */
-  position: sticky;          /* scroll panna top la stay */
+  position: sticky;          /* stay on top when scrolling */
   top: 0;
   left: 0;
-  right: 0;
   background: rgba(0,0,0,0.8);
   backdrop-filter: blur(6px);
   padding: 15px 0;
@@ -145,7 +146,7 @@ nav a {
 @media (max-width: 768px) {
   section {
     width: 90%;
-    margin: 5% auto;
+    margin: 40px auto;
   }
 
   nav {
@@ -172,7 +173,7 @@ nav a {
 /* Contact */
 #contact {
   width: 90%;
-  margin: 5% auto;
+  margin: 40px auto;
 }
 
 .contact-box {
@@ -206,8 +207,8 @@ nav a {
 /* Intro */
 #intro {
   width: 90%;
-  margin: 5% auto;
-  color: #ffffff;   /* 🔥 White text */
+  margin: 40px auto;
+  color: #ffffff;
   padding-top: 80px; /* 🔥 Prevent overlap with sticky navbar */
 }
 
