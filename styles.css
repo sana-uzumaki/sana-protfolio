@@ -101,7 +101,7 @@ blockquote {
 /* Navbar */
 header {
   width: 100%;             /* 🔥 full stretch */
-  position: sticky;          /* always on top */
+  position: fixed;          /* always on top */
   top: 0;
   left: 0;
   right: 0;
@@ -110,6 +110,7 @@ header {
   padding: 12px 0;
   z-index: 1000;
   box-sizing: border-box;
+  margin-bottem: 5%;
 }
 
 /* Content inside */
