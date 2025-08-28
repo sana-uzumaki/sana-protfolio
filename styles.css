@@ -109,12 +109,14 @@ header {
 }
 
 .navbar {
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px; /* optional for spacing inside */
+  box-sizing: border-box;
 }
+
 
 .logo {
   font-size: 20px;
