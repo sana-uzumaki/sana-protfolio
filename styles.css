@@ -101,7 +101,6 @@ blockquote {
 /* Navbar */
 header {
   width: 100%;               /* 🔥 full stretch */
-  height: 10%;
   position: sticky;          /* scroll panna top la stay */
   top: 0;
   left: 0;
