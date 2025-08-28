@@ -3,47 +3,45 @@ body {
   font-family: Arial, sans-serif;
   color: #ffffff;   /* 🔥 All text white */
   line-height: 1.6;
-  background-color: #fff;
+  background-color: #0D1117;
   background-image: url("img1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-/* 💻 Background for Laptop/Tablet only */
-
-
 a {
-  color: #58a6ff;
+  color: #0073b1;
   text-decoration: none;
 }
 a:hover {
-  color: #D3D3D3;
+  color: #005582;
   text-decoration: none;
 }
 
 h1, h2 {
-  color: #f0f6fc;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
 section {
   width: 90%;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  margin-left: 5%;
-  margin-right: 5%:
-  background:     #0d1117;
+  margin: 40px auto;
+  background: #0D1117;   /* 🔥 Dark bg */
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
   padding: 40px 20px;
+  color: #ffffff;
 }
 
 blockquote {
   font-style: italic;
-  color: #8b949e;
-  border-left: 3px solid #58a6ff;
+  color: #cccccc;
+  border-left: 3px solid #0073b1;
   padding-left: 10px;
 }
 
@@ -59,7 +57,7 @@ blockquote {
 /* Tech Stack Section */
 #tech h3 {
   margin-top: 20px;
-  color: #58a6ff;
+  color: #0073b1;
   font-size: 18px;
 }
 
@@ -74,18 +72,18 @@ blockquote {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #21262d;
+  background: #f0f0f0;   /* 🔥 light chip bg */
   padding: 8px 14px;
   border-radius: 10px;
   font-size: 14px;
   font-weight: bold;
-  color: #e6edf3;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  color: #000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .stack span:hover {
-  background: #30363d;
+  background: #e6f0ff;
   transform: translateY(-2px);
 }
 
@@ -103,24 +101,29 @@ blockquote {
 
 /* Navbar */
 header {
-  background-color: rgba(0,0,0,0.5);
-  backdrop-filter: blur(5px);
-  padding: 15px 20px;
+  width: 100%;
   position: sticky;
   top: 0;
-  z-index: 10;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(6px);
+  padding: 15px 0;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
 .navbar {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 .logo {
   font-size: 20px;
   font-weight: bold;
+  color: #fff;
 }
 
 nav {
@@ -129,30 +132,33 @@ nav {
 }
 nav a {
   font-weight: bold;
+  color: #fff;
 }
 .menu-toggle {
   display: none;
   font-size: 24px;
   cursor: pointer;
+  color: #fff;
 }
 
 /* 📱 Mobile Navbar */
 @media (max-width: 768px) {
   section {
     width: 90%;
-    margin: 5% auto;
+    margin: 40px auto;
   }
 
   nav {
     display: none;
     flex-direction: column;
-    background: #21262d;
+    background: #0D1117;
     position: absolute;
     top: 55px;
     right: 20px;
     padding: 15px;
     border-radius: 8px;
     width: 200px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   }
   nav.active {
     display: flex;
@@ -165,7 +171,7 @@ nav a {
 /* Contact */
 #contact {
   width: 90%;
-  margin: 5% auto;
+  margin: 40px auto;
 }
 
 .contact-box {
@@ -176,7 +182,7 @@ nav a {
   border-radius: 8px;
   padding: 10px 15px;
   margin: 20px 12%;
-  background-color: #fefefe;
+  background-color: #fff;
   gap: 12px;
   transition: 0.3s;
 }
@@ -200,17 +206,18 @@ nav a {
 /* Intro */
 #intro {
   width: 90%;
-  margin: 5% auto;
-  color: #fff;
+  margin: 40px auto;
+  color: #ffffff;
+  padding-top: 80px; /* prevent overlap with navbar */
 }
 
 /* Footer */
 footer {
   width: 100%;
   text-align: center;
-  background: #161b22;
-  color: #8b949e;
+  background: #0D1117;
+  color: #ccc;
   margin-top: 20px;
-  padding: 6px 0; /* chinna padding vaachuruken */
-  font-size: 10px; /* text perusa theriyama control panna */
-  }
+  padding: 6px 0;
+  font-size: 10px;
+    }
