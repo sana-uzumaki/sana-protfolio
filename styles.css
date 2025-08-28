@@ -4,41 +4,46 @@ body {
   color: #ffffff;   /* 🔥 All text white */
   line-height: 1.6;
   background-color: #fff;
-  background-image: url("1000_F_354438078_PEfNvHUfDa3dEojnAXRgZTKa5xBYYVjo (1).jpg");
+  background-image: url("img1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
 
+/* 💻 Background for Laptop/Tablet only */
+
+
 a {
-  color: #0073b1;
+  color: #58a6ff;
   text-decoration: none;
 }
 a:hover {
-  color: #005582;
+  color: #D3D3D3;
   text-decoration: none;
 }
 
 h1, h2 {
-  color: #ffffff;   /* 🔥 Headings white */
+  color: #f0f6fc;
   margin-bottom: 10px;
 }
 
 section {
   width: 90%;
-  margin: 5% auto;
-  background: #0D1117;   /* Solid dark bg */
-  border-radius: 12px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 5%;
+  margin-right: 5%:
+  background:     #0d1117;
+  border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
   padding: 40px 20px;
-  color: #ffffff;  /* 🔥 Section text white */
 }
 
 blockquote {
   font-style: italic;
-  color: #cccccc;  /* light grey for contrast */
-  border-left: 3px solid #0073b1;
+  color: #8b949e;
+  border-left: 3px solid #58a6ff;
   padding-left: 10px;
 }
 
@@ -54,7 +59,7 @@ blockquote {
 /* Tech Stack Section */
 #tech h3 {
   margin-top: 20px;
-  color: #0073b1;
+  color: #58a6ff;
   font-size: 18px;
 }
 
@@ -69,18 +74,18 @@ blockquote {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #f0f0f0;
+  background: #21262d;
   padding: 8px 14px;
   border-radius: 10px;
   font-size: 14px;
   font-weight: bold;
-  color: #000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  color: #e6edf3;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .stack span:hover {
-  background: #e6f0ff;
+  background: #30363d;
   transform: translateY(-2px);
 }
 
@@ -98,15 +103,12 @@ blockquote {
 
 /* Navbar */
 header {
-  width: 100%;
-  left: 0;
-  top: 0;
-  position: sticky;
-  background: rgba(0,0,0,0.85);
-  backdrop-filter: blur(6px);
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
   padding: 15px 20px;
-  z-index: 1000;
-  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .navbar {
@@ -119,7 +121,6 @@ header {
 .logo {
   font-size: 20px;
   font-weight: bold;
-  color: #fff;
 }
 
 nav {
@@ -128,13 +129,11 @@ nav {
 }
 nav a {
   font-weight: bold;
-  color: #fff;
 }
 .menu-toggle {
   display: none;
   font-size: 24px;
   cursor: pointer;
-  color: #fff;
 }
 
 /* 📱 Mobile Navbar */
@@ -147,21 +146,19 @@ nav a {
   nav {
     display: none;
     flex-direction: column;
-    background: #0D1117;
+    background: #21262d;
     position: absolute;
     top: 55px;
     right: 20px;
     padding: 15px;
     border-radius: 8px;
     width: 200px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   }
   nav.active {
     display: flex;
   }
   .menu-toggle {
     display: block;
-    color: #fff;
   }
 }
 
@@ -177,8 +174,9 @@ nav a {
   align-items: center;
   border: 1px solid #ccc;
   border-radius: 8px;
+  padding: 10px 15px;
   margin: 20px 12%;
-  background-color: #fff;
+  background-color: #fefefe;
   gap: 12px;
   transition: 0.3s;
 }
@@ -203,16 +201,16 @@ nav a {
 #intro {
   width: 90%;
   margin: 5% auto;
-  color: #ffffff;   /* 🔥 White text */
+  color: #fff;
 }
 
 /* Footer */
 footer {
   width: 100%;
   text-align: center;
-  background: #0D1117;
-  color: #ccc;
+  background: #161b22;
+  color: #8b949e;
   margin-top: 20px;
-  padding: 6px 0;
-  font-size: 10px;
+  padding: 6px 0; /* chinna padding vaachuruken */
+  font-size: 10px; /* text perusa theriyama control panna */
   }
