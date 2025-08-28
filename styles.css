@@ -9,6 +9,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  margin: 0;  /* 🔥 remove unwanted white space */
+  padding: 0;
 }
 
 a {
@@ -98,23 +100,19 @@ blockquote {
 
 /* Navbar */
 header {
-  width: 100%;             /* 🔥 full stretch */
-  position: sticky;          /* always on top */
+  width: 100%;               /* 🔥 full stretch */
+  position: sticky;          /* scroll panna top la stay */
   top: 0;
   left: 0;
-  right: 0;
-  color: rgba(0,0,0,0.8);
   background: rgba(0,0,0,0.8);
   backdrop-filter: blur(6px);
-  padding: 12px 0;
+  padding: 15px 0;
   z-index: 1000;
   box-sizing: border-box;
-  margin-bottem: 5%;
 }
 
-/* Content inside */
 .navbar {
-  width: 90%;               /* content align center */
+  width: 90%;                /* content center */
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -155,6 +153,7 @@ nav a {
     background: #0D1117;
     position: absolute;
     top: 0;
+    right: 0;
     padding: 15px;
     border-radius: 8px;
     width: 200px;
@@ -208,6 +207,7 @@ nav a {
   width: 90%;
   margin: 5% auto;
   color: #ffffff;   /* 🔥 White text */
+  padding-top: 80px; /* 🔥 Prevent overlap with sticky navbar */
 }
 
 /* Footer */
@@ -219,4 +219,4 @@ footer {
   margin-top: 20px;
   padding: 6px 0;
   font-size: 10px;
-  }
+}
