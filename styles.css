@@ -29,7 +29,7 @@ h1, h2 {
 section {
   width: 90%;
   margin: 5% auto;
-  background: #f9f9f9; /* light grey for highlight */
+  background:  #0d1117 ; /* light grey for highlight */
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
   padding: 40px 20px;
