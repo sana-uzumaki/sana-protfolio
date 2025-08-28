@@ -100,12 +100,11 @@ blockquote {
 /* Navbar */
 header {
   width: 100vw; /* 🔥 Full viewport width */
-  left: 0;
   top: 0;
   position: sticky;
   background: rgba(0,0,0,0.8); /* little darker, full stretch */
   backdrop-filter: blur(6px);
-  padding: 15px 0;   /* 🔥 remove side padding so it touches both ends */
+  padding: 0 0;   /* 🔥 remove side padding so it touches both ends */
   z-index: 1000;
   box-sizing: border-box;
 }
