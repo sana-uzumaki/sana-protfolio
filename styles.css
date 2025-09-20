@@ -243,30 +243,26 @@ footer {
   margin-bottom: 5px;
 }
 
-/* Inputs (desktop / tablet) */
-#feedback .field input,
-#feedback .field textarea {
+#feedback .field input {
   width: 100%;
-  padding: 10px 12px;             /* balanced height for desktop */
+  padding: 12px 15px;
   font-size: 14px;
   border: none;
   border-radius: 10px;
-  background-color: #161b22;      /* match section inner background */
+  background-color: #161b22;   /* match section inner background */
   color: #e6edf3;
   box-sizing: border-box;
-  resize: vertical;               /* allows textarea resizing vertically */
 }
 
-#feedback .field input::placeholder,
-#feedback .field textarea::placeholder {
+#feedback .field input::placeholder {
   color: #888;
 }
 
 /* Submit Button */
 #feedback input[type="submit"] {
   width: 100%;
-  padding: 10px 12px;             /* balanced height for desktop */
-  font-size: 15px;
+  padding: 12px;
+  font-size: 16px;
   background-color: #4460AA;
   color: #fff;
   border: none;
@@ -287,17 +283,13 @@ footer {
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
-  #feedback .field input,
-  #feedback .field textarea {
-    padding: 8px 10px;             /* smaller height for mobile */
+  #feedback .field input {
+    padding: 10px 12px;
     font-size: 14px;
   }
 
   #feedback input[type="submit"] {
-    padding: 8px 10px;             /* smaller height for mobile */
-    font-size: 14px;
+    font-size: 15px;
+    padding: 10px;
   }
 }
-
-
-
