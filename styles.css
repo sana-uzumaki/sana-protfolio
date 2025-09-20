@@ -1,16 +1,15 @@
-/* General */
+/* ===================== General ===================== */
 body {
   margin: 0;
   width: 100%;
   font-family: Arial, sans-serif;
-  color: #ffffff;   /* 🔥 All text white */
+  color: #ffffff;
   line-height: 1.6;
- /* background-color: #0D6; */
   background-image: url("my_bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed; 
+  background-attachment: fixed;
 }
 
 a {
@@ -19,13 +18,12 @@ a {
 }
 a:hover {
   color: #D3D3D3;
-  text-decoration: none;
 }
 
 h1, h2 {
   color: #f0f6fc;
   margin-bottom: 10px;
-  text-align: center; /* 🔥 Heading centre */
+  text-align: center;
 }
 
 blockquote {
@@ -33,32 +31,30 @@ blockquote {
   color: #8b949e;
   border-left: 3px solid #58a6ff;
   padding-left: 10px;
-  text-align: center; /* 🔥 blockquote centre */
+  text-align: center;
 }
 
-/* Section */
-/* Section */
+/* ===================== Sections ===================== */
 section {
   width: 90%;
-  margin: 40px auto;   /* 🔥 Section box centre */
+  margin: 40px auto;
   background: #0d1117;
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
   padding: 40px 20px;
   backdrop-filter: blur(8px);
-  /* text-align: center; ❌ remove panniten */
 }
 
-/* Gif */
+/* GIF */
 .gif {
   width: 95%;
   max-height: 50%;
   display: block;
-  margin: 10px auto;   /* 🔥 Centre */
+  margin: 10px auto;
   border-radius: 15px;
 }
 
-/* Tech Stack Section */
+/* ===================== Tech Stack ===================== */
 #tech h3 {
   margin-top: 20px;
   color: #58a6ff;
@@ -69,9 +65,9 @@ section {
 .stack {
   display: flex;
   flex-wrap: wrap;
- /* justify-content: center;  🔥 Centre items */
   gap: 12px;
   margin-bottom: 20px;
+  justify-content: center;
 }
 
 .stack span {
@@ -97,15 +93,15 @@ section {
   font-size: 20px;
 }
 
-/* Stats img */
+/* Stats images */
 .stats {
   width: 100%;
   max-width: 500px;
   display: block;
-  margin: 20px auto;   /* 🔥 Centre */
+  margin: 20px auto;
 }
 
-/* Navbar */
+/* ===================== Navbar ===================== */
 header {
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(5px);
@@ -140,10 +136,10 @@ nav a {
   cursor: pointer;
 }
 
-/* 📱 Mobile Navbar */
+/* ===================== Mobile Navbar ===================== */
 @media (max-width: 768px) {
   section {
-    width: 90%;
+    width: 95%;
     margin: 20px auto;
   }
 
@@ -166,33 +162,39 @@ nav a {
   }
 }
 
-/* Contact */
+/* ===================== Contact Section ===================== */
 #contact {
   width: 90%;
-  margin: 20px auto;   /* 🔥 Centre */
+  margin: 20px auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
+/* Contact Boxes */
 .contact-box {
-  width: 76%;
-  margin: 20px auto;   /* 🔥 Centre */
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center; /* 🔥 Content centre */
+  justify-content: center;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 10px 15px;
+  border-radius: 12px;
+  padding: 12px 20px;
   background-color: #fefefe;
   gap: 12px;
-  transition: 0.3s;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 .contact-box:hover {
   background-color: #e6f0ff;
   border-color: #0073b1;
 }
 .contact-box img {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
 }
 .contact-box a {
   text-decoration: none;
@@ -203,15 +205,86 @@ nav a {
   color: #0073b1;
 }
 
-/* Intro */
+/* ===================== Feedback Form ===================== */
+.card {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 25px 20px;
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  background-color: #2a313b;
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #fff;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 13px;
+  color: #ccc;
+}
+
+.field input {
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.field input::placeholder {
+  color: #888;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 14px 0;
+  font-size: 16px;
+  background-color: #4460AA;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+input[type="submit"]:hover {
+  background-color: #2c3eaa;
+}
+input[type="submit"]:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* ===================== Intro ===================== */
 #intro {
   width: 90%;
-  margin: 40px auto;   /* 🔥 Centre */
+  margin: 40px auto;
   color: #fff;
   text-align: center;
 }
 
-/* Footer */
+/* ===================== Footer ===================== */
 footer {
   width: 100%;
   text-align: center;
@@ -222,13 +295,35 @@ footer {
   font-size: 10px;
 }
 
-/* Contact Form */
-.card { background-color: #121212; padding: 30px 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); max-width: 450px; width: 100%; color: #fff; margin: 20px auto; }
-.card h2 { text-align: center; margin-bottom: 20px; font-size: 24px; }
-.field { margin-bottom: 15px; text-align: left; }
-.field label { display: block; font-size: 13px; color: #ccc; margin-bottom: 5px; }
-.field input { width: 100%; padding: 10px 12px; font-size: 14px; border: none; border-radius: 8px; background-color: #1e1e1e; color: #fff; }
-.field input::placeholder { color: #888; }
-input[type="submit"] { width: 100%; padding: 12px; font-size: 16px; background-color: #4460AA; color: #fff; border: none; border-radius: 10px; cursor: pointer; margin-top: 10px; }
-input[type="submit"]:disabled { background-color: #555; cursor: not-allowed; }
+/* ===================== Mobile Adjustments ===================== */
+@media (max-width: 768px) {
+  #contact {
+    width: 95%;
+    gap: 15px;
+  }
+  
+  .contact-box, .card {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+  }
+  
+  .field input {
+    font-size: 16px;
+    padding: 14px 12px;
+  }
 
+  input[type="submit"] {
+    font-size: 17px;
+    padding: 16px 0;
+  }
+
+  .stack span {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .stack i {
+    font-size: 18px;
+  }
+}
