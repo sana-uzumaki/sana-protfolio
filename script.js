@@ -1,11 +1,11 @@
+// Force scroll to top on refresh
 window.addEventListener('load', function() {
-  // Force scroll to top after page fully loaded
-  window.scrollTo(0, 0);
+  setTimeout(function() {
+    window.scrollTo(0, 0);
+  }, 10);
 });
 
-
 document.addEventListener('DOMContentLoaded', function() {
-  // Menu toggle
   var menuToggle = document.getElementById("menu-toggle");
   var menu = document.getElementById("menu");
 
@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     menu.className = menu.className === "active" ? "" : "active";
   };
 
-  // Smooth scroll for menu links
   var links = menu.getElementsByTagName("a");
   var header = document.querySelector('header');
 
@@ -28,12 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
           behavior: "smooth"
         });
       }
-      // Close mobile menu after click
       if (window.innerWidth <= 768) menu.className = "";
     };
   }
 
-  // Initialize EmailJS
   emailjs.init('ffrUFX5iYhWpk6xcr');
   const btn = document.getElementById('button');
 
@@ -42,13 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.value = 'Sending...';
 
     const serviceID = 'default_service';
-    const templateID = '__ejs-test-mail-service'; // make sure this matches your template ID
+    const templateID = '__ejs-test-mail-service';
 
     emailjs.sendForm(serviceID, templateID, this)
       .then(() => {
         btn.value = 'Send Email';
         alert('Sent!');
-        this.reset(); // optional: reset the form after sending
+        this.reset();
       }, (err) => {
         btn.value = 'Send Email';
         alert(JSON.stringify(err));
