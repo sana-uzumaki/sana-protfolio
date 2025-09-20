@@ -1,49 +1,46 @@
-// 🔹 Navbar Toggle
-var menuToggle = document.getElementById("menu-toggle");
-var menu = document.getElementById("menu");
+document.addEventListener('DOMContentLoaded', function() {
+  var menuToggle = document.getElementById("menu-toggle");
+  var menu = document.getElementById("menu");
 
-menuToggle.onclick = function() {
-  menu.className = menu.className === "active" ? "" : "active";
-};
-
-// 🔹 Smooth Scroll
-var links = menu.getElementsByTagName("a");
-var header = document.querySelector('header');
-
-for (var i = 0; i < links.length; i++) {
-  links[i].onclick = function(e) {
-    e.preventDefault();
-    var targetId = this.getAttribute("href").substring(1);
-    var targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      window.scrollTo({
-        top: targetElement.offsetTop - header.offsetHeight,
-        behavior: "smooth"
-      });
-    }
-    if (window.innerWidth <= 768) menu.className = "";
+  menuToggle.onclick = function() {
+    menu.className = menu.className === "active" ? "" : "active";
   };
-}
 
-// 🔹 EmailJS Contact Form
-emailjs.init('ffrUFX5iYhWpk6xcr');
-    const btn = document.getElementById('button');
+  var links = menu.getElementsByTagName("a");
+  var header = document.querySelector('header');
 
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
+  for (var i = 0; i < links.length; i++) {
+    links[i].onclick = function(e) {
+      e.preventDefault();
+      var targetId = this.getAttribute("href").substring(1);
+      var targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - header.offsetHeight,
+          behavior: "smooth"
+        });
+      }
+      if (window.innerWidth <= 768) menu.className = "";
+    };
+  }
 
-   btn.value = 'Sending...';
+  emailjs.init('ffrUFX5iYhWpk6xcr');
+  const btn = document.getElementById('button');
 
-   const serviceID = 'default_service';
-   const templateID = ' __ejs-test-mail-service';
+  document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    btn.value = 'Sending...';
 
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
-    });
+    const serviceID = 'default_service';
+    const templateID = ' __ejs-test-mail-service';
+
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        btn.value = 'Send Email';
+        alert('Sent!');
+      }, (err) => {
+        btn.value = 'Send Email';
+        alert(JSON.stringify(err));
+      });
+  });
 });
