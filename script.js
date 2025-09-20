@@ -28,22 +28,21 @@ document.addEventListener('DOMContentLoaded', function() {
   emailjs.init('ffrUFX5iYhWpk6xcr');
   const btn = document.getElementById('button');
 
-  document.getElementById('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    btn.value = 'Sending...';
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
 
-    const serviceID = 'default_service';
-    const templateID = '__ejs-test-mail-service';
+   btn.value = 'Sending...';
 
-    emailjs.sendForm(serviceID, templateID, this)
-      .then(() => {
-        btn.value = 'Send Email';
-        alert('Sent!');
-        this.reset();
-      })
-      .catch((err) => {
-        btn.value = 'Send Email';
-        alert(JSON.stringify(err));
-      });
-  });
+   const serviceID = 'default_service';
+   const templateID = ' __ejs-test-mail-service';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
 });
