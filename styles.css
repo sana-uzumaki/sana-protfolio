@@ -230,24 +230,28 @@ footer {
   font-size: 10px;
 }
 
-/* Contact Form */
+/* Feedback Form */
 .card {
-  background-color: #121212;
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  max-width: 450px;
-  width: 100%;
-  color: #fff;
-  margin: 20px auto;
+  background-color: #0d1117;       /* match other sections */
+  padding: 30px 20px;              /* similar padding */
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.6); /* match section shadow */
+  width: 90%;                      /* responsive width */
+  max-width: 600px;                /* cap max width */
+  margin: 20px auto;               /* center on page */
+  color: #e6edf3;                  /* match section text color */
+  backdrop-filter: blur(8px);      /* subtle blur like sections */
 }
 
+/* Feedback Form Heading */
 .card h2 {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 22px;
+  color: #f0f6fc;                  /* match other headings */
 }
 
+/* Form Fields */
 .field {
   margin-bottom: 15px;
   text-align: left;
@@ -256,11 +260,12 @@ footer {
 .field label {
   display: block;
   font-size: 13px;
-  color: #ccc;
+  color: #8b949e;                  /* match blockquote & other labels */
   margin-bottom: 5px;
 }
 
-.field input {
+.field input,
+.field textarea {
   width: 100%;
   padding: 10px 12px;
   font-size: 14px;
@@ -268,9 +273,11 @@ footer {
   border-radius: 8px;
   background-color: #1e1e1e;
   color: #fff;
+  resize: vertical;
 }
 
-.field input::placeholder {
+.field input::placeholder,
+.field textarea::placeholder {
   color: #888;
 }
 
@@ -284,9 +291,27 @@ input[type="submit"] {
   border-radius: 10px;
   cursor: pointer;
   margin-top: 10px;
+  transition: background 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #334f88;
 }
 
 input[type="submit"]:disabled {
   background-color: #555;
   cursor: not-allowed;
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 768px) {
+  .card {
+    padding: 20px 15px;
+    width: 95%;
+    margin: 15px auto;
+  }
+
+  .card h2 {
+    font-size: 20px;
+  }
 }
