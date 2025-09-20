@@ -25,25 +25,23 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // EmailJS
-  emailjs.init('ffrUFX5iYhWpk6xcr');
   const btn = document.getElementById('button');
-  const form = document.getElementById('form');
 
-  btn.addEventListener('click', function() {
-    btn.textContent = 'Sending...';
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
 
-    const serviceID = 'default_service';
-    const templateID = '__ejs-test-mail-service';
+   btn.value = 'Sending...';
 
-    emailjs.sendForm(serviceID, templateID, form)
-      .then(() => {
-        btn.textContent = 'Send Email';
-        alert('Sent!');
-        form.reset();
-      })
-      .catch((err) => {
-        btn.textContent = 'Send Email';
-        alert('Error: ' + JSON.stringify(err));
-      });
-  });
+   const serviceID = 'default_service';
+   const templateID = ' __ejs-test-mail-service';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
 });
