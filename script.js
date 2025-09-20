@@ -34,7 +34,7 @@ for (var i = 0; i < links.length; i++) {
 }
 
 emailjs.init('ffrUFX5iYhWpk6xcr');
-    const btn = document.getElementById('button');
+const btn = document.getElementById('button');
 
 document.getElementById('form')
  .addEventListener('submit', function(event) {
