@@ -230,9 +230,9 @@ footer {
   font-size: 10px;
 }
 
-/* Feedback Form - Desktop */
+/* Feedback Form - Desktop / Tablet */
 .card {
-  background-color: #121212;         /* dark card background on desktop */
+  background-color: #121212;         /* card style on desktop */
   padding: 30px 40px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
@@ -299,42 +299,47 @@ input[type="submit"]:disabled {
   cursor: not-allowed;
 }
 
-/* Mobile: Make feedback form identical to sections */
+/* Mobile: exactly match sections */
 @media (max-width: 768px) {
   .card {
-    background: #0d1117;          /* same as sections */
-    border-radius: 10px;          /* same as sections */
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
-    padding: 40px 20px;           /* same as sections */
-    width: 90%;                   /* same as sections */
-    margin: 20px auto;
-    color: #e6edf3;               /* same as section text */
-    backdrop-filter: blur(8px);
+    background: #0d1117;                 /* same as section */
+    border-radius: 10px;                 /* same as section */
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.6); /* same as section */
+    padding: 40px 20px;                  /* same as section */
+    width: 90%;                          /* same as section */
+    margin: 40px auto;                   /* same as section */
+    color: #e6edf3;                      /* same as section text */
+    backdrop-filter: blur(8px);          /* same as section */
   }
 
   .card h2 {
-    color: #f0f6fc;
+    color: #f0f6fc;                      /* same as section headings */
     text-align: center;
     margin-bottom: 10px;
     font-size: 22px;
   }
 
-  .field label,
-  .field input,
-  .field textarea,
-  input[type="submit"] {
+  .field label {
+    color: #8b949e;                      /* match section labels */
     font-size: 14px;
-    color: #e6edf3;
   }
 
   .field input,
   .field textarea {
-    background-color: #161b22;  /* match section inner content */
-    border-radius: 10px;
+    background-color: #161b22;           /* same as section inner background */
+    border-radius: 10px;                 /* match section */
+    color: #e6edf3;                      /* text color same as section */
+    padding: 10px;
   }
 
   input[type="submit"] {
-    background-color: #4460AA; /* keep button color */
+    background-color: #4460AA;           /* button color same as before */
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #334f88;
   }
 }
-
