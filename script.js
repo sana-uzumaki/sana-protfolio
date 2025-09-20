@@ -1,8 +1,8 @@
-// 🌟 Fix refresh: always scroll to top
-if (window.location.hash) {
-  history.replaceState(null, null, ' ');  // remove hash
-  window.scrollTo(0, 0);                  // scroll to top
-}
+window.addEventListener('load', function() {
+  // Force scroll to top after page fully loaded
+  window.scrollTo(0, 0);
+});
+
 
 document.addEventListener('DOMContentLoaded', function() {
   // Menu toggle
