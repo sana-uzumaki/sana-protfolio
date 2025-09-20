@@ -230,54 +230,57 @@ footer {
   font-size: 10px;
 }
 
-/* Feedback Form - Desktop / Tablet */
-.card {
-  background-color: #121212;         /* card style on desktop */
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  max-width: 450px;
-  width: 100%;
-  color: #fff;
-  margin: 20px auto;
+
+/* General Section Style */
+#feedback {
+  background: #0d1117;              /* same as other sections */
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
+  padding: 40px 20px;
+  width: 90%;
+  max-width: 900px;                 /* fits laptop/tablet */
+  margin: 40px auto;
+  color: #e6edf3;
+  backdrop-filter: blur(8px);
 }
 
-.card h2 {
+/* Heading */
+#feedback h2 {
   text-align: center;
+  color: #f0f6fc;
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 26px;
 }
 
-.field {
+/* Fields */
+#feedback .field {
   margin-bottom: 15px;
-  text-align: left;
 }
 
-.field label {
+#feedback .field label {
   display: block;
-  font-size: 13px;
-  color: #ccc;
+  font-size: 14px;
+  color: #8b949e;
   margin-bottom: 5px;
 }
 
-.field input,
-.field textarea {
+#feedback .field input {
   width: 100%;
-  padding: 10px 12px;
+  padding: 12px 15px;
   font-size: 14px;
   border: none;
-  border-radius: 8px;
-  background-color: #1e1e1e;
-  color: #fff;
-  resize: vertical;
+  border-radius: 10px;
+  background-color: #161b22;        /* match section inner background */
+  color: #e6edf3;
+  box-sizing: border-box;
 }
 
-.field input::placeholder,
-.field textarea::placeholder {
+#feedback .field input::placeholder {
   color: #888;
 }
 
-input[type="submit"] {
+/* Submit Button */
+#feedback input[type="submit"] {
   width: 100%;
   padding: 12px;
   font-size: 16px;
@@ -290,56 +293,36 @@ input[type="submit"] {
   transition: background 0.2s ease;
 }
 
-input[type="submit"]:hover {
+#feedback input[type="submit"]:hover {
   background-color: #334f88;
 }
 
-input[type="submit"]:disabled {
+#feedback input[type="submit"]:disabled {
   background-color: #555;
   cursor: not-allowed;
 }
 
-/* Mobile: exactly match sections */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
-  .card {
-    background: #0d1117;                 /* same as section */
-    border-radius: 10px;                 /* same as section */
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.6); /* same as section */
-    padding: 40px 20px;                  /* same as section */
-    width: 90%;                          /* same as section */
-    margin: 40px auto;                   /* same as section */
-    color: #e6edf3;                      /* same as section text */
-    backdrop-filter: blur(8px);          /* same as section */
+  #feedback {
+    width: 95%;
+    padding: 30px 15px;
+    margin: 20px auto;
   }
 
-  .card h2 {
-    color: #f0f6fc;                      /* same as section headings */
-    text-align: center;
-    margin-bottom: 10px;
+  #feedback h2 {
     font-size: 22px;
+    margin-bottom: 15px;
   }
 
-  .field label {
-    color: #8b949e;                      /* match section labels */
+  #feedback .field input {
+    padding: 10px 12px;
     font-size: 14px;
   }
 
-  .field input,
-  .field textarea {
-    background-color: #161b22;           /* same as section inner background */
-    border-radius: 10px;                 /* match section */
-    color: #e6edf3;                      /* text color same as section */
+  #feedback input[type="submit"] {
+    font-size: 15px;
     padding: 10px;
   }
-
-  input[type="submit"] {
-    background-color: #4460AA;           /* button color same as before */
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  input[type="submit"]:hover {
-    background-color: #334f88;
-  }
 }
+
