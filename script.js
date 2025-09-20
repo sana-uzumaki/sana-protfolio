@@ -29,22 +29,21 @@ document.addEventListener('DOMContentLoaded', function() {
   const btn = document.getElementById('button');
   const form = document.getElementById('form');
 
-  form.addEventListener('submit', function(event) {
-    event.preventDefault(); // ❌ Prevent page reload
-    btn.value = 'Sending...';
+  btn.addEventListener('click', function() {
+    btn.textContent = 'Sending...';
 
     const serviceID = 'default_service';
     const templateID = '__ejs-test-mail-service';
 
-    emailjs.sendForm(serviceID, templateID, this)
+    emailjs.sendForm(serviceID, templateID, form)
       .then(() => {
-        btn.value = 'Send Email';
+        btn.textContent = 'Send Email';
         alert('Sent!');
         form.reset();
       })
       .catch((err) => {
-        btn.value = 'Send Email';
-        alert(JSON.stringify(err));
+        btn.textContent = 'Send Email';
+        alert('Error: ' + JSON.stringify(err));
       });
   });
 });
