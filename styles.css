@@ -231,28 +231,7 @@ footer {
 }
 
 
-/* General Section Style */
-#feedback {
-  background: #0d1117;              /* same as other sections */
-  border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
-  padding: 40px 20px;
-  width: 90%;
-  max-width: 900px;                 /* fits laptop/tablet */
-  margin: 40px auto;
-  color: #e6edf3;
-  backdrop-filter: blur(8px);
-}
-
-/* Heading */
-#feedback h2 {
-  text-align: center;
-  color: #f0f6fc;
-  margin-bottom: 20px;
-  font-size: 26px;
-}
-
-/* Fields */
+/* Feedback Form Fields */
 #feedback .field {
   margin-bottom: 15px;
 }
@@ -270,7 +249,7 @@ footer {
   font-size: 14px;
   border: none;
   border-radius: 10px;
-  background-color: #161b22;        /* match section inner background */
+  background-color: #161b22;   /* match section inner background */
   color: #e6edf3;
   box-sizing: border-box;
 }
@@ -304,17 +283,6 @@ footer {
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
-  #feedback {
-    width: 95%;
-    padding: 30px 15px;
-    margin: 20px auto;
-  }
-
-  #feedback h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
-  }
-
   #feedback .field input {
     padding: 10px 12px;
     font-size: 14px;
@@ -325,4 +293,5 @@ footer {
     padding: 10px;
   }
 }
+
 
