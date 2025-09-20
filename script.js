@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Scroll to top on refresh
+  window.scrollTo(0, 0);
+
   var menuToggle = document.getElementById("menu-toggle");
   var menu = document.getElementById("menu");
 
