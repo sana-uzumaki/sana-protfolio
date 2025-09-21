@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.value = 'Sending...';
 
     const serviceID = 'default_service';
-    const templateID = '__ejs-test-mail-service'; // make sure this matches your EmailJS template
+    const templateID = ' __ejs-test-mail-service'; // make sure this matches your EmailJS template
 
     emailjs.sendForm(serviceID, templateID, this)
       .then(() => {
