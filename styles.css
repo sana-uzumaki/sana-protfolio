@@ -68,13 +68,17 @@ section {
   padding: 60px 20px;
 }
 
-#hero .tagline {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-top: 10px;
-  color: #B3FFCC;
+.tagline {
+  font-size: 1.5em;
+  color: #7CFFB3;
+  margin: 15px 0 25px 0;
+  animation: fadeInOut 4s infinite;
 }
 
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
 /* GIFs */
 .gif {
   width: 95%;
