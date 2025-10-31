@@ -1,7 +1,7 @@
 /* Base Styles */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   background: #0A0F0D;
   color: #E0FFE0;
   line-height: 1.6;
@@ -21,7 +21,7 @@ a:hover {
 header {
   position: sticky;
   top: 0;
-  background: rgba(0,15,13,0.7);
+  background: rgba(0, 15, 13, 0.7);
   backdrop-filter: blur(5px);
   padding: 15px 20px;
   z-index: 10;
@@ -98,4 +98,160 @@ section {
   margin: 40px auto;
   background: #0D1A13;
   border-radius: 10px;
-  padding:
+  padding: 30px 20px;
+}
+
+section h1, section h2, section h3 {
+  color: #00FF88;
+}
+
+p, li, blockquote {
+  color: #E0FFE0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* Skills Section */
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skill-bar span {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.progress {
+  background: #1A2B1F;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 18px;
+}
+
+.progress div {
+  height: 100%;
+  background: #00FF88;
+  width: 0;
+  animation: loadSkill 2s forwards;
+}
+
+@keyframes loadSkill {
+  to { width: var(--width);}
+}
+
+/* Stack Section */
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.stack span {
+  background: #07220F;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Stats Images */
+.stats {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Contact Boxes */
+.contact-box {
+  background: #07220F;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.contact-box:hover {
+  background: #00FF88;
+  color: #0A0F0D;
+  cursor: pointer;
+}
+
+/* Feedback Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.field input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+#button {
+  background: #00FF88;
+  color: #0A0F0D;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#button:hover {
+  background: #33FFAA;
+  transform: translateY(-2px);
+}
+
+#form-status {
+  color: #7CFFB3;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #07220F;
+  border-top: 2px solid #00FF88;
+  margin-top: 40px;
+  color: #7CFFB3;
+  font-size: 0.9em;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .stack, .skills {
+    flex-direction: column;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+  }
+
+  #menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+}
