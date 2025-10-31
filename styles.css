@@ -1,9 +1,9 @@
-/* ==================== GENERAL ==================== */
+/* General */
 body {
   margin: 0;
   width: 100%;
   font-family: Arial, sans-serif;
-  color: #E0FFE0; /* soft neon green text */
+  color: #E0FFE0;   /* soft neon green text */
   line-height: 1.6;
   background-color: #0A0F0D; /* Neo Dark Base */
   background-image: url("my_bg.jpg");
@@ -25,7 +25,7 @@ body::before {
   z-index: -1;
 }
 
-/* ==================== LINKS ==================== */
+/* Links */
 a {
   color: #00FF88; /* neon green */
   text-decoration: none;
@@ -35,20 +35,14 @@ a:hover {
   color: #7CFFB3;
 }
 
-/* ==================== HEADINGS ==================== */
+/* Headings */
 h1, h2 {
   color: #B3FFCC;
   margin-bottom: 10px;
   text-align: center;
 }
 
-section h1, section h2, section h3 {
-  color: #00FF88;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-/* ==================== BLOCKQUOTE ==================== */
+/* Blockquote */
 blockquote {
   font-style: italic;
   color: #7CFFB3;
@@ -57,7 +51,7 @@ blockquote {
   text-align: center;
 }
 
-/* ==================== SECTIONS ==================== */
+/* Section */
 section {
   width: 90%;
   margin: 40px auto;
@@ -68,7 +62,20 @@ section {
   backdrop-filter: blur(8px);
 }
 
-/* ==================== GIFS ==================== */
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#hero .tagline {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #B3FFCC;
+}
+
+/* GIFs */
 .gif {
   width: 95%;
   max-height: 50%;
@@ -77,7 +84,14 @@ section {
   border-radius: 15px;
 }
 
-/* ==================== TECH STACK ==================== */
+/* Tech Stack Section */
+#tech h3 {
+  margin-top: 20px;
+  color: #00FF88;
+  font-size: 18px;
+  text-align: center;
+}
+
 .stack {
   display: flex;
   flex-wrap: wrap;
@@ -108,7 +122,39 @@ section {
   font-size: 20px;
 }
 
-/* ==================== STATS IMAGES ==================== */
+/* Skills Bars */
+.skills {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.skill-bar {
+  margin-bottom: 15px;
+}
+
+.skill-bar span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.progress {
+  width: 100%;
+  background: #223322;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 18px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #00FF88;
+  width: 0; /* fallback */
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+
+/* Stats Image */
 .stats {
   width: 100%;
   max-width: 500px;
@@ -116,7 +162,7 @@ section {
   margin: 20px auto;
 }
 
-/* ==================== NAVBAR ==================== */
+/* Navbar */
 header {
   background-color: rgba(0,15,13,0.7);
   backdrop-filter: blur(5px);
@@ -153,6 +199,7 @@ nav a {
   position: relative;
 }
 
+/* Hover Effect for Navbar Links */
 nav a:hover {
   color: #0A0F0D;             /* Text changes to dark for contrast */
   background-color: #00FF88;  /* Button-like background */
@@ -195,7 +242,7 @@ nav a:hover {
   }
 }
 
-/* ==================== CONTACT ==================== */
+/* Contact Section */
 #contact {
   width: 90%;
   margin: 20px auto;
@@ -236,63 +283,26 @@ nav a:hover {
   color: #00FF88;
 }
 
-/* ==================== INTRO HERO ==================== */
+/* Intro Section */
 #intro {
   width: 90%;
   margin: 40px auto;
   color: #E0FFE0;
-  justify-content: center; /* vertical center */
-  align-items: center;     /* horizontal center */
   text-align: center;
-  font-size: 2em;
-  font-weight: bold;
-  padding-top: 60px;
 }
 
-.tagline {
-  font-size: 1.5em;
+/* Footer */
+footer {
+  width: 100%;
+  text-align: center;
+  background: #0D1A13;
   color: #7CFFB3;
-  margin: 15px 0 25px 0;
-  animation: fadeInOut 4s infinite;
+  margin-top: 20px;
+  padding: 6px 0;
+  font-size: 10px;
 }
 
-@keyframes fadeInOut {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
-}
-
-/* ==================== SKILL BARS ==================== */
-.skill-bar {
-  margin: 20px 0;
-}
-
-.skill-bar span {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 6px;
-  color: #00FF88;
-}
-
-.progress {
-  background: #1A2B1F;
-  border-radius: 10px;
-  overflow: hidden;
-  height: 18px;
-}
-
-.progress div {
-  background: #00FF88;
-  width: 0;
-  border-radius: 10px;
-  animation: loadSkill 2s forwards;
-}
-
-@keyframes loadSkill {
-  to { width: var(--width); }
-}
-
-
-/* ==================== FEEDBACK FORM ==================== */
+/* Feedback Form Fields */
 #feedback .field {
   margin-bottom: 15px;
 }
@@ -319,6 +329,7 @@ nav a:hover {
   color: #88FFAA;
 }
 
+/* Submit Button */
 #feedback input[type="submit"] {
   width: 100%;
   padding: 12px;
@@ -341,6 +352,7 @@ nav a:hover {
   cursor: not-allowed;
 }
 
+/* Mobile Adjustments */
 @media (max-width: 768px) {
   #feedback .field input {
     padding: 10px 12px;
@@ -351,16 +363,4 @@ nav a:hover {
     font-size: 15px;
     padding: 10px;
   }
-}
-
-
-/* ==================== FOOTER ==================== */
-footer {
-  width: 100%;
-  text-align: center;
-  background: #0D1A13;
-  color: #7CFFB3;
-  margin-top: 20px;
-  padding: 6px 0;
-  font-size: 10px;
 }
