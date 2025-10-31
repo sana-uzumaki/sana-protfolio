@@ -241,6 +241,8 @@ nav a:hover {
   width: 90%;
   margin: 40px auto;
   color: #E0FFE0;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
   text-align: center;
   font-size: 2em;
   font-weight: bold;
