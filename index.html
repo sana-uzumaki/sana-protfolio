@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sanantheshwaran E - Portfolio</title>
 
   <!-- SEO -->
-  <meta name="description" content="Portfolio of Sanantheshwaran E – Engineering student, backend developer, Java & Python programmer, problem solver, and builder of mobile login systems using Java & Kotlin. View projects, skills, and professional experience.">
-  <meta name="keywords" content="Sanantheshwaran, Portfolio, Developer, Python, Java, Kotlin, Projects, Login System, Problem Solving">
-  <meta name="author" content="Sanantheshwaran E">
+  <meta name="description" content="Portfolio of Sanantheshwaran E – Engineering student, backend developer, Java & Python programmer, problem solver, and builder of mobile login systems using Java & Kotlin. View projects, skills, and professional experience." />
+  <meta name="keywords" content="Sanantheshwaran, Portfolio, Developer, Python, Java, Kotlin, Projects, Login System, Problem Solving" />
+  <meta name="author" content="Sanantheshwaran E" />
 
-  <link rel="stylesheet" href="styles.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Devicons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- EmailJS (kept but not initialized) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
 </head>
 
 <body>
@@ -22,12 +26,13 @@
   <header>
     <div class="navbar">
       <div class="logo">
-        <img src="https://image.freepik.com/free-vector/letter-s-logo-vector_23987-138.jpg" id="mylogo">
+        <img src="https://image.freepik.com/free-vector/letter-s-logo-vector_23987-138.jpg" id="mylogo" alt="S Logo">
         Sanantheshwaran E
       </div>
 
-      <div class="menu-toggle" id="menu-toggle">☰</div>
-      <nav id="menu">
+      <div class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</div>
+
+      <nav id="menu" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#tech">Tech Stack</a>
         <a href="#projects">Projects</a>
@@ -40,8 +45,11 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="hero">
-    <h1>Hello, I'm <span style="color:#ff4b4b;">Sanantheshwaran</span></h1>
+  <section id="hero" aria-labelledby="hero-heading">
+    <h1 id="hero-heading">Hello, I'm
+      <!-- typed name will be injected here -->
+      <span id="typed-name" aria-live="polite" style="color:#ff4b4b;"></span><span class="caret" aria-hidden="true">|</span>
+    </h1>
     <p class="tagline">Engineering Student | Developer | Problem Solver</p>
   </section>
 
@@ -50,18 +58,18 @@
     <h1>About Me</h1>
 
     <p>
-      I am an engineering student focused on software development, backend systems, and practical programming.  
+      I am an engineering student focused on software development, backend systems, and practical programming.
       I enjoy building real-world applications, simplifying complex ideas, and creating systems that work efficiently under constraints.
     </p>
 
     <p>
-      My interests revolve around problem solving, systems development, and improving logic-based programs.  
-      I work comfortably across multiple languages such as Java, Python, JavaScript, and Kotlin.  
+      My interests revolve around problem solving, systems development, and improving logic-based programs.
+      I work comfortably across multiple languages such as Java, Python, JavaScript, and Kotlin.
       I also have experience developing tools that simplify workflows and automate tasks.
     </p>
 
     <p>
-      I believe in writing clean code, understanding fundamentals deeply, and building solutions that scale.  
+      I believe in writing clean code, understanding fundamentals deeply, and building solutions that scale.
       My work ranges from mobile login systems to backend automation, calculators, games, and search tools.
     </p>
 
@@ -125,46 +133,32 @@
 
     <div class="project">
       <h3>Mobile Login System (Java + Kotlin)</h3>
-      <p>
-        A mobile-style login and account management system built using Java and Kotlin.  
-        Includes user authentication flows, validation, error handling, and UI logic similar to real applications.
-      </p>
+      <p>A mobile-style login and account management system built using Java and Kotlin. Includes user authentication flows, validation, error handling, and UI logic similar to real applications.</p>
     </div>
 
     <div class="project">
       <h3>Calculator (Python)</h3>
-      <p>
-        Built using loops and evaluation logic.  
-        Supports dynamic input evaluation and error-resistant expression handling.
-      </p>
+      <p>Built using loops and evaluation logic. Supports dynamic input evaluation and error-resistant expression handling.</p>
     </div>
 
     <div class="project">
       <h3>X-O Game</h3>
-      <p>
-        A logic-based terminal game with input validation, win-checking algorithms, and board-state management.
-      </p>
+      <p>A logic-based terminal game with input validation, win-checking algorithms, and board-state management.</p>
     </div>
 
     <div class="project">
       <h3>Hangman Game</h3>
-      <p>
-        A word-guessing game with state tracking and interactive gameplay designed using Python.
-      </p>
+      <p>A word-guessing game with state tracking and interactive gameplay designed using Python.</p>
     </div>
 
     <div class="project">
       <h3>Chat Bot (Wikipedia Search)</h3>
-      <p>
-        A Python chatbot that fetches information from Wikipedia, parses results, and returns clean summaries.
-      </p>
+      <p>A Python chatbot that fetches information from Wikipedia, parses results, and returns clean summaries.</p>
     </div>
 
     <div class="project">
       <h3>Dictionary Tool</h3>
-      <p>
-        A program that retrieves definitions using keyword-based lookup and formatted output.
-      </p>
+      <p>A program that retrieves definitions using keyword-based lookup and formatted output.</p>
     </div>
   </section>
 
@@ -177,8 +171,8 @@
   <!-- GitHub Stats -->
   <section id="github">
     <h2>GitHub Activity</h2>
-    <img src="https://github-readme-stats.vercel.app/api?username=sana-uzumaki&show_icons=true&theme=radical" class="stats">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sana-uzumaki&layout=compact" class="stats">
+    <img src="https://github-readme-stats.vercel.app/api?username=sana-uzumaki&show_icons=true&theme=radical" class="stats" alt="GitHub Stats">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sana-uzumaki&layout=compact" class="stats" alt="Top Languages">
   </section>
 
   <!-- Contact -->
@@ -187,21 +181,21 @@
 
     <a href="mailto:sana0630c@gmail.com">
       <div class="contact-box">
-        <img src="https://img.icons8.com/?size=100&id=qyRpAggnV0zH&format=png" alt=""> 
+        <img src="https://img.icons8.com/?size=100&id=qyRpAggnV0zH&format=png" alt="email icon"> 
         sana0630c@gmail.com
       </div>
     </a>
 
-    <a href="https://github.com/sana-uzumaki" target="_blank">
+    <a href="https://github.com/sana-uzumaki" target="_blank" rel="noopener">
       <div class="contact-box">
-        <img src="https://img.icons8.com/ios-glyphs/24/github.png">
+        <img src="https://img.icons8.com/ios-glyphs/24/github.png" alt="github icon">
         sana-uzumaki
       </div>
     </a>
 
-    <a href="https://www.linkedin.com/in/sanantheshwaran-e-238b32332" target="_blank">
+    <a href="https://www.linkedin.com/in/sanantheshwaran-e-238b32332" target="_blank" rel="noopener">
       <div class="contact-box">
-        <img src="https://img.icons8.com/ios-filled/24/linkedin.png">
+        <img src="https://img.icons8.com/ios-filled/24/linkedin.png" alt="linkedin icon">
         Sanantheshwaran E
       </div>
     </a>
@@ -224,11 +218,11 @@
 
       <div class="field">
         <label for="message">Message</label>
-        <input type="text" name="message" id="message" placeholder="Your message" required>  
+        <textarea name="message" id="message" placeholder="Your message" required></textarea>
       </div>
 
       <input type="submit" value="Send Email" id="button">
-      <p id="form-status"></p>
+      <p id="form-status" aria-live="polite"></p>
     </form>
   </section>
 
@@ -238,6 +232,5 @@
   </footer>
 
   <script src="script.js"></script>
-
 </body>
-                                                                             </html>
+  </html>
