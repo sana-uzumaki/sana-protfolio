@@ -3,212 +3,241 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanantheshwaran E - Portfolio</title>
 
-  <title>Sanantheshwaran E | Portfolio, Web3 & Full Stack Developer</title>
-  <meta name="description" content="Portfolio of Sanantheshwaran E, Engineering Student and Full Stack Developer. Explore projects in Web3, Python, Java, JavaScript, Web Development, App Development, Automation, Git, GitHub, and LeetCode contributions.">
-  <meta name="keywords" content="Sanantheshwaran E, Portfolio, Web3, Full Stack Developer, Python, Java, JavaScript, Programming, GitHub, LeetCode, Engineering Student, Web Development, App Development, Automation">
+  <!-- SEO -->
+  <meta name="description" content="Portfolio of Sanantheshwaran E – Engineering student, backend developer, Java & Python programmer, problem solver, and builder of mobile login systems using Java & Kotlin. View projects, skills, and professional experience.">
+  <meta name="keywords" content="Sanantheshwaran, Portfolio, Developer, Python, Java, Kotlin, Projects, Login System, Problem Solving">
   <meta name="author" content="Sanantheshwaran E">
-  <meta name="robots" content="index, follow">
 
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="Sanantheshwaran E | Portfolio" />
-  <meta property="og:description" content="Engineering student and programmer specializing in Web3, Python, Java, JavaScript, Web & App Development, and Automation projects." />
-  <meta property="og:image" content="https://image.freepik.com/free-vector/letter-s-logo-vector_23987-138.jpg" />
-  <meta property="og:url" content="https://yourportfolio.com" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Styles & Icons -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
-  <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Sanantheshwaran E",
-    "url": "https://yourportfolio.com",
-    "sameAs": [
-      "https://github.com/sana-uzumaki",
-      "https://www.linkedin.com/in/sanantheshwaran-e-238b32332"
-    ],
-    "jobTitle": "Engineering Student & Full Stack Developer",
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "Bachelor's in Computer Engineering"
-    },
-    "knowsAbout": ["Web3", "Python", "Java", "JavaScript", "Web & App Development", "Automation"],
-    "description": "Engineering student and programmer skilled in Web3, Python, Java, JavaScript, Web & App Development, and Automation projects."
-  }
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
+
 <body>
 
   <!-- Header / Navbar -->
   <header>
     <div class="navbar">
       <div class="logo">
-        <img src="https://image.freepik.com/free-vector/letter-s-logo-vector_23987-138.jpg" alt="S Logo - Sanantheshwaran E" id="mylogo">
+        <img src="https://image.freepik.com/free-vector/letter-s-logo-vector_23987-138.jpg" id="mylogo">
         Sanantheshwaran E
       </div>
-      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+      <div class="menu-toggle" id="menu-toggle">☰</div>
       <nav id="menu">
-        <a href="#about">About Sanantheshwaran E - Web3 & Programming Portfolio</a>
-        <a href="#tech">Explore Tech Stack & Developer Tools</a>
-        <a href="#leetcode">LeetCode Stats of Sanantheshwaran E</a>
-        <a href="#github">GitHub Projects & Contributions</a>
-        <a href="#contact">Contact Sanantheshwaran E</a>
-        <a href="#feedback">Send Feedback or Message</a>
+        <a href="#about">About</a>
+        <a href="#tech">Tech Stack</a>
+        <a href="#projects">Projects</a>
+        <a href="#leetcode">LeetCode</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
+        <a href="#feedback">Feedback</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main>
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>Hello, I'm <span style="color:#ff4b4b;">Sanantheshwaran</span></h1>
+    <p class="tagline">Engineering Student | Developer | Problem Solver</p>
+  </section>
 
-    <!-- Hero Section -->
-    <section id="hero">
-      <h1>Hello, I'm Sanantheshwaran</h1>
-      <p>Professional Web3 Explorer and Full Stack Developer with hands-on experience in Python, Java, JavaScript, Web Development, App Development, and Automation.</p>
-    </section>
+  <!-- About Section -->
+  <section id="about">
+    <h1>About Me</h1>
 
-    <!-- About Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I am an Engineering Student and Full Stack Developer focused on delivering efficient, scalable, and innovative solutions. My work includes building web applications, developing blockchain-based projects, and implementing automation tools to improve workflow efficiency.</p>
-      <p>I have a strong background in Python, Java, JavaScript, and Web Development frameworks. I continuously expand my skills and explore modern technologies to ensure high-quality, real-world solutions.</p>
-      <p>Bachelor’s in Computer Engineering | Certifications: Hackerrank Java Pro, Web Development Projects</p>
-      <blockquote>“I strive to develop solutions that are innovative, efficient, and scalable.”</blockquote>
+    <p>
+      I am an engineering student focused on software development, backend systems, and practical programming.  
+      I enjoy building real-world applications, simplifying complex ideas, and creating systems that work efficiently under constraints.
+    </p>
 
-      <!-- Skills -->
-      <div class="skills">
-        <div class="skill-bar">
-          <span>Python</span>
-          <div class="progress"><div class="progress-fill" style="width:95%"></div></div>
-        </div>
-        <div class="skill-bar">
-          <span>Java</span>
-          <div class="progress"><div class="progress-fill" style="width:90%"></div></div>
-        </div>
-        <div class="skill-bar">
-          <span>JavaScript</span>
-          <div class="progress"><div class="progress-fill" style="width:85%"></div></div>
-        </div>
-        <div class="skill-bar">
-          <span>Web3</span>
-          <div class="progress"><div class="progress-fill" style="width:80%"></div></div>
-        </div>
-        <div class="skill-bar">
-          <span>Web & App Development</span>
-          <div class="progress"><div class="progress-fill" style="width:75%"></div></div>
-        </div>
+    <p>
+      My interests revolve around problem solving, systems development, and improving logic-based programs.  
+      I work comfortably across multiple languages such as Java, Python, JavaScript, and Kotlin.  
+      I also have experience developing tools that simplify workflows and automate tasks.
+    </p>
+
+    <p>
+      I believe in writing clean code, understanding fundamentals deeply, and building solutions that scale.  
+      My work ranges from mobile login systems to backend automation, calculators, games, and search tools.
+    </p>
+
+    <h2>Skills Overview</h2>
+
+    <div class="skills">
+      <div class="skill-bar">
+        <span>Python</span>
+        <div class="progress"><div class="progress-fill" style="width:90%"></div></div>
       </div>
-    </section>
+      <div class="skill-bar">
+        <span>Java</span>
+        <div class="progress"><div class="progress-fill" style="width:85%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <span>JavaScript</span>
+        <div class="progress"><div class="progress-fill" style="width:80%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <span>Kotlin</span>
+        <div class="progress"><div class="progress-fill" style="width:70%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <span>Backend Development</span>
+        <div class="progress"><div class="progress-fill" style="width:75%"></div></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Tech Stack Section -->
-    <section id="tech">
-      <h2>Tech Stack & Tools</h2>
+  <!-- Tech Stack Section -->
+  <section id="tech">
+    <h2>Tech Stack</h2>
 
-      <h3>Languages</h3>
-      <div class="stack">
-        <span><i class="devicon-python-plain colored"></i> Python</span>
-        <span><i class="devicon-java-plain colored"></i> Java</span>
-        <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
-        <span><i class="devicon-c-plain colored"></i> C</span>
-        <span><i class="devicon-php-plain colored"></i> PHP</span>
-        <span><i class="devicon-mysql-plain colored"></i> SQL</span>
+    <h3>Languages</h3>
+    <div class="stack">
+      <span><i class="devicon-python-plain colored"></i> Python</span>
+      <span><i class="devicon-java-plain colored"></i> Java</span>
+      <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+      <span><i class="devicon-kotlin-plain colored"></i> Kotlin</span>
+      <span><i class="devicon-c-plain colored"></i> C</span>
+      <span><i class="devicon-php-plain colored"></i> PHP</span>
+      <span><i class="devicon-mysql-plain colored"></i> SQL</span>
+    </div>
+
+    <h3>Tools & Platforms</h3>
+    <div class="stack">
+      <span><i class="devicon-git-plain colored"></i> Git</span>
+      <span><i class="devicon-github-original colored"></i> GitHub</span>
+      <span><i class="devicon-linux-plain colored"></i> Linux</span>
+      <span><i class="devicon-vscode-plain colored"></i> VS Code</span>
+      <span><i class="devicon-android-plain colored"></i> Android Studio</span>
+      <span><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+      <span><i class="devicon-bash-plain colored"></i> Shell Scripting</span>
+      <span><i class="devicon-firebase-plain colored"></i> Firebase</span>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Mobile Login System (Java + Kotlin)</h3>
+      <p>
+        A mobile-style login and account management system built using Java and Kotlin.  
+        Includes user authentication flows, validation, error handling, and UI logic similar to real applications.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>Calculator (Python)</h3>
+      <p>
+        Built using loops and evaluation logic.  
+        Supports dynamic input evaluation and error-resistant expression handling.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>X-O Game</h3>
+      <p>
+        A logic-based terminal game with input validation, win-checking algorithms, and board-state management.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>Hangman Game</h3>
+      <p>
+        A word-guessing game with state tracking and interactive gameplay designed using Python.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>Chat Bot (Wikipedia Search)</h3>
+      <p>
+        A Python chatbot that fetches information from Wikipedia, parses results, and returns clean summaries.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>Dictionary Tool</h3>
+      <p>
+        A program that retrieves definitions using keyword-based lookup and formatted output.
+      </p>
+    </div>
+  </section>
+
+  <!-- LeetCode Stats -->
+  <section id="leetcode">
+    <h2>LeetCode Stats</h2>
+    <img src="https://leetcard.jacoblin.cool/sana_0630?theme=dark&font=Baloo%202&ext=activity" alt="LeetCode Stats" class="stats">
+  </section>
+
+  <!-- GitHub Stats -->
+  <section id="github">
+    <h2>GitHub Activity</h2>
+    <img src="https://github-readme-stats.vercel.app/api?username=sana-uzumaki&show_icons=true&theme=radical" class="stats">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sana-uzumaki&layout=compact" class="stats">
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+
+    <a href="mailto:sana0630c@gmail.com">
+      <div class="contact-box">
+        <img src="https://img.icons8.com/?size=100&id=qyRpAggnV0zH&format=png" alt=""> 
+        sana0630c@gmail.com
+      </div>
+    </a>
+
+    <a href="https://github.com/sana-uzumaki" target="_blank">
+      <div class="contact-box">
+        <img src="https://img.icons8.com/ios-glyphs/24/github.png">
+        sana-uzumaki
+      </div>
+    </a>
+
+    <a href="https://www.linkedin.com/in/sanantheshwaran-e-238b32332" target="_blank">
+      <div class="contact-box">
+        <img src="https://img.icons8.com/ios-filled/24/linkedin.png">
+        Sanantheshwaran E
+      </div>
+    </a>
+  </section>
+
+  <!-- Feedback -->
+  <section id="feedback">
+    <h2>Contact / Feedback Form</h2>
+
+    <form id="form">
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
       </div>
 
-      <h3>Domains & Tools</h3>
-      <div class="stack">
-        <span>Web3 Development</span>
-        <span>Automation & Scripting</span>
-        <span><i class="devicon-git-plain colored"></i> Git</span>
-        <span><i class="devicon-github-original colored"></i> GitHub</span>
-        <span><i class="devicon-linux-plain colored"></i> Linux</span>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
       </div>
-    </section>
 
-    <!-- LeetCode Stats -->
-    <section id="leetcode">
-      <h2>LeetCode Stats</h2>
-      <img src="https://leetcard.jacoblin.cool/sana_0630?theme=dark&font=Baloo%202&ext=activity" 
-           alt="LeetCode statistics of Sanantheshwaran E" 
-           title="LeetCode Stats" 
-           class="stats" loading="lazy">
-    </section>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" placeholder="Your message" required></textarea>
+      </div>
 
-    <!-- GitHub Stats -->
-    <section id="github">
-      <h2>GitHub Stats</h2>
-      <img src="https://github-readme-stats.vercel.app/api?username=sana-uzumaki&show_icons=true&theme=radical" 
-           alt="GitHub Stats of Sanantheshwaran E" 
-           title="GitHub Stats" 
-           class="stats" loading="lazy">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sana-uzumaki&layout=compact" 
-           alt="Top Programming Languages of Sanantheshwaran E" 
-           title="Top Languages" 
-           class="stats" loading="lazy">
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Connect with Me</h2>
-
-      <a href="mailto:sana0630c@gmail.com">
-        <div class="contact-box">
-          <img src="https://img.icons8.com/?size=100&id=qyRpAggnV0zH&format=png&color=000000" alt="Email Icon">
-          sana0630c@gmail.com
-        </div>
-      </a>
-
-      <a href="https://github.com/sana-uzumaki" target="_blank" rel="noopener">
-        <div class="contact-box">
-          <img src="https://img.icons8.com/ios-glyphs/24/000000/github.png" alt="GitHub Icon">
-          sana-uzumaki
-        </div>
-      </a>
-
-      <a href="https://www.linkedin.com/in/sanantheshwaran-e-238b32332" target="_blank" rel="noopener">
-        <div class="contact-box">
-          <img src="https://img.icons8.com/ios-filled/24/000000/linkedin.png" alt="LinkedIn Icon">
-          Sanantheshwaran E
-        </div>
-      </a>
-    </section>
-
-    <!-- Feedback / Contact Form -->
-    <section id="feedback">
-      <h2>Contact / Feedback Form</h2>
-      <form id="form">
-        <div class="field">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" placeholder="Your name" required>
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="Your email" required>
-        </div>
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea name="message" id="message" placeholder="Your message" required></textarea>
-        </div>
-        <input type="submit" value="Send Email" id="button">
-        <p id="form-status" aria-live="polite"></p>
-      </form>
-    </section>
-
-  </main>
+      <input type="submit" value="Send Email" id="button">
+      <p id="form-status"></p>
+    </form>
+  </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Sanantheshwaran E | Engineering Student | Web3 | Python | Java | JavaScript | Web & App Development | GitHub & LeetCode Portfolio | All Rights Reserved</p>
+    <p>© 2025 Sanantheshwaran E | All Rights Reserved</p>
   </footer>
 
-  <!-- Script -->
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
+
 </body>
-                          </html>
+                                                                             </html>
