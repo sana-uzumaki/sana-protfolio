@@ -1,14 +1,12 @@
-// 🌟 Smooth scroll to top on page refresh
+// Scroll to top on refresh
 window.addEventListener('load', function() {
   setTimeout(function() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, 50);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+
   // Mobile menu toggle
   var menuToggle = document.getElementById("menu-toggle");
   var menu = document.getElementById("menu");
@@ -24,20 +22,38 @@ document.addEventListener('DOMContentLoaded', function() {
   for (var i = 0; i < links.length; i++) {
     links[i].onclick = function(e) {
       e.preventDefault();
-      var targetId = this.getAttribute("href").substring(1);
-      var targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - header.offsetHeight,
-          behavior: "smooth"
-        });
-      }
-      // Close mobile menu after click
+      var id = this.getAttribute("href").substring(1);
+      var el = document.getElementById(id);
+
+      window.scrollTo({
+        top: el.offsetTop - header.offsetHeight,
+        behavior: "smooth"
+      });
+
       if (window.innerWidth <= 768) menu.className = "";
     };
   }
 
-  // Initialize EmailJS
+  // Typing animation
+  var textElement = document.getElementById("typedName");
+  var nameText = "Sanantheshwaran";
+  var index = 0;
+
+  function typeName() {
+    if (index < nameText.length) {
+      textElement.textContent += nameText.charAt(index);
+      index++;
+      setTimeout(typeName, 140);
+    } else {
+      // stop blinking slowly
+      document.querySelector(".cursor").style.animation = "none";
+      document.querySelector(".cursor").style.opacity = "0.5";
+    }
+  }
+
+  typeName();
+
+  // EmailJS
   emailjs.init('ffrUFX5iYhWpk6xcr');
   const btn = document.getElementById('button');
 
@@ -45,36 +61,15 @@ document.addEventListener('DOMContentLoaded', function() {
     event.preventDefault();
     btn.value = 'Sending...';
 
-    const serviceID = 'default_service';
-    const templateID = ' __ejs-test-mail-service'; // make sure this matches your EmailJS template
-
-    emailjs.sendForm(serviceID, templateID, this)
+    emailjs.sendForm('default_service', '__ejs-test-mail-service', this)
       .then(() => {
         btn.value = 'Send Email';
         alert('Sent!');
-        this.reset(); // reset form after submission
+        this.reset();
       }, (err) => {
         btn.value = 'Send Email';
         alert(JSON.stringify(err));
       });
   });
-
-  // ----------------------------------------------------
-  // ✅ NEW: NAME TYPING ANIMATION + BLINKING BAR
-  // ----------------------------------------------------
-
-  const textElement = document.getElementById("typed-name");
-  const nameText = "Sanantheshwaran";
-  let index = 0;
-
-  function typeName() {
-    if (index < nameText.length) {
-      textElement.textContent += nameText.charAt(index);
-      index++;
-      setTimeout(typeName, 150);  // slow typing speed (C)
-    }
-  }
-
-  typeName(); // start animation
 
 });
