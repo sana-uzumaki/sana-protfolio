@@ -58,4 +58,23 @@ document.addEventListener('DOMContentLoaded', function() {
         alert(JSON.stringify(err));
       });
   });
+
+  // ----------------------------------------------------
+  // ✅ NEW: NAME TYPING ANIMATION + BLINKING BAR
+  // ----------------------------------------------------
+
+  const textElement = document.getElementById("typed-name");
+  const nameText = "Sanantheshwaran";
+  let index = 0;
+
+  function typeName() {
+    if (index < nameText.length) {
+      textElement.textContent += nameText.charAt(index);
+      index++;
+      setTimeout(typeName, 150);  // slow typing speed (C)
+    }
+  }
+
+  typeName(); // start animation
+
 });
